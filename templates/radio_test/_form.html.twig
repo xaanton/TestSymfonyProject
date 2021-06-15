@@ -1,0 +1,43 @@
+
+{{ form_start(form) }}
+    <div style="color:blue">
+        <div class="container">
+            {{ form_widget(form.children['selectedValue'][0]) }}
+            {{ form_label(form.children['selectedValue'][0]) }}
+        </div>
+        <div>
+            {{ form_help(form.children['selectedValue'][0]) }}
+            {{ form_errors(form.children['selectedValue'][0]) }}
+        </div>
+        <div>THIS IS 0 CHOICE</div>
+    </div>
+
+    <div style="color:green">
+        <div class="container">
+            {{ form_widget(form.children['selectedValue'][1]) }}
+            {{ form_label(form.children['selectedValue'][1]) }}
+        </div>
+        <div>
+            {{ form_help(form.children['selectedValue'][1]) }}
+            {{ form_errors(form.children['selectedValue'][1]) }}
+        </div>
+        <div>THIS IS 1 CHOICE</div>
+    </div>
+
+    <div style="color:orange">
+
+        <div class="container">
+            {{ form_widget(form.children['selectedValue'][2]) }}
+            {{ form_label(form.children['selectedValue'][2]) }}
+        </div>
+        <div>
+            {{ form_help(form.children['selectedValue'][2]) }}
+            {{ form_errors(form.children['selectedValue'][2]) }}
+        </div>
+        <div>THIS IS 2 CHOICE</div>
+    </div>
+
+    <div>
+        {{ form_widget(form.children['save']) }}
+    </div>
+{{ form_end(form) }}

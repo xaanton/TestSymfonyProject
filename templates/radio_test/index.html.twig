@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RadioTest index{% endblock %}
+
+{% block body %}
+    <h1>RadioTest index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>SelectedValue</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for radio_test in radio_tests %}
+            <tr>
+                <td>{{ radio_test.id }}</td>
+                <td>{{ radio_test.selectedValue }}</td>
+                <td>
+                    <a href="{{ path('radio_test_show', {'id': radio_test.id}) }}">show</a>
+                    <a href="{{ path('radio_test_edit', {'id': radio_test.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('radio_test_new') }}">Create new</a>
+{% endblock %}
