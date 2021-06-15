@@ -18,8 +18,8 @@ class RadioTestType extends AbstractType
                 'choices'  => ['Value1'=>0,'Value2'=>2,'Value3'=>3],
                 'expanded' => true,
                 'multiple' => false,
-                'attr' => ['style' => 'color:greed'],
-            ))->add('save', SubmitType::class, [
+            ))
+            ->add('save', SubmitType::class, [
                 'attr' => ['style' => 'color:red'],
             ]);
     }
